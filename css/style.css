@@ -63,8 +63,8 @@ img {
 /*start стили header*/
 .header {
   background: url('../imgs/img/headerBG.jpg') no-repeat center top;
-  
-  max-height: 436px;
+  width: 100%;
+  min-height: 436px;
 }
 .lumus-logo{
   margin: 20px;
@@ -80,5 +80,43 @@ img {
 .title__bold {
   font-family: "LatoBold";
   font-weight: bold;
+  
+font-size: 55px;
+}
+.title__font-china {
+  font-family: "ChinaCyr";
+  font-size: 60px;
+  color: #FAD264;
+}
+.color_white {
+  color: white;
 }
 /*end стили header*/
+
+/*start rectangle*/
+.rectangle {
+  width: 100%;
+  background: #FAD264;
+}
+.rectangle__paragraph {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+/*end rectangle*/
+
+/*start presentation*/
+.presentation {
+  background: url('../imgs/img/presentationBG.jpg') no-repeat center top;
+  width: 100%;
+  min-height: 512px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.learn {
+  
+}
+.cost {
+ 
+}
+/*end presentation*/

@@ -48,6 +48,7 @@ body {
   background: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
   font-family: "LatoRegular";
+  max-width: 1918px;
   min-width: 320px;
   font-size: 18px;
 
@@ -57,7 +58,7 @@ img {
   height: auto;
 } 
 .container {
-  max-width: 1140px;
+  
 }
 
 /*start стили header*/
@@ -67,7 +68,7 @@ img {
   min-height: 436px;
 }
 .lumus-logo{
-  margin: 20px;
+  padding: 20px;
 }
 .lumus-logo__intr {
   color: #FFFFFF;
@@ -120,3 +121,48 @@ font-size: 55px;
  
 }
 /*end presentation*/
+
+/*start differences*/
+.differences {
+  text-align: center;
+}
+/*end differences*/
+
+.separation-line {
+  text-align: center;
+}
+/*start notes*/
+.notes {
+  text-align: center;
+}
+/*end notes*/
+
+/*start pros*/
+.pros {
+  text-align: center;
+  background: #EBEBEB;
+}
+/*end pros*/
+
+/*start costs*/
+.costs {
+  text-align: center;
+  
+}
+/*end costs*/
+
+/*start personal-account*/
+.personal-account {
+  background: url('../imgs/img/personal-accBG.jpg') no-repeat center top;
+  width: 100%;
+}
+/*end personal-account*/
+
+/*start footer*/
+.foot {
+background: url('../imgs/img/footerBG.jpg') no-repeat center top;
+width: 100%;
+color: #FFFFFF;
+text-align: center;
+}
+/*end footer*/

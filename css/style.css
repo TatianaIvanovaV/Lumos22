@@ -46,6 +46,7 @@ html {
 }
 body {
   background: #FFFFFF;
+  color: rgba(0, 0, 0, 0.87);
   font-family: "LatoRegular";
   min-width: 320px;
   font-size: 18px;
@@ -55,20 +56,29 @@ img {
   max-width: 100%;
   height: auto;
 } 
-
-.conteiner {
+.container {
   max-width: 1140px;
 }
+
 /*start стили header*/
 .header {
-  background-image: url('../imgs/img/headerBG.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  min-height: 436px;
+  background: url('../imgs/img/headerBG.jpg') no-repeat center top;
+  
+  max-height: 436px;
+}
+.lumus-logo{
+  margin: 20px;
 }
 .lumus-logo__intr {
   color: #FFFFFF;
   font-size: 1.15em;
+}
+.title {
+  text-align: center;
+  color: #FFFFFF;
+}
+.title__bold {
+  font-family: "LatoBold";
+  font-weight: bold;
 }
 /*end стили header*/

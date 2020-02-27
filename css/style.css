@@ -17,20 +17,6 @@
         url("../fonts/Lato/LatoBold.woff") format("woff"),
         url("../fonts/Lato/LatoBold.ttf") format("truetype");
 }
-*/
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Roboto/roboto-v20-latin_cyrillic-regular.eot');
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/Roboto/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), 
-       url('../fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), 
-       url('../fonts/Roboto/roboto-v20-latin_cyrillic-regular.woff') format('woff'),
-       url('../fonts/Roboto/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'),
-       url('../fonts/Roboto/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg');
-}
 
 @font-face {
   font-family: "ChinaCyr";
@@ -39,58 +25,74 @@
   src: url("../fonts/China/8650.ttf") format("truetype");
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-body, html  {
+ html  {
   box-sizing: border-box;
+} 
+body {
   background: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
   font-family: "LatoRegular";
-} 
-img {
-  max-width: 100%;
-  height: auto;
-} 
-/*.container {
-  border: 1px solid red;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: normal;
 }
-*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+.container {
+  padding: 0px;
+}
+ul,
+li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.button {
+
+}
 /*start стили header*/
 .header {
-  font-family: "LatoRegular";
+  padding: 20px 0;
   background: url('../imgs/img/headerBG.jpg') no-repeat center top;
-  width: 100%;
-  padding: 20px;
+ 
+  
 }
 .lumus-header__img {
-  width: 120%;
+ 
 }
 .lumus-header__intro {
   color: #FFFFFF;
   font-size: 20px;
+  margin: 15px 0;
 }
-.title {
-  color: #FFFFFF;
+.main-title {
+  color: #fff;
+  padding-left: 24px;
  }
-.title__bold {
+.main-title__bold {
   font-family: "LatoBold";
-  font-weight: 900;
-  font-size: 60px;
+  font-weight: bolder;
+  font-size: 3.49rem;
+  
+  
   }
-.title__font-china {
+.main-title__font-china {
   font-family: "ChinaCyr";
   font-size: 60px;
   color: #FAD264;
+  
 }
-.color_white {
+.color--white {
   color: white;
  }
- .title__stars{
+ .main-title__stars{
   position: relative;
   z-index: 2;
  }
- .title__stars::before {
+ .main-title__stars::before {
   content: "";
   width: 586px;
   border: 0.5px solid #FAD264;
@@ -99,7 +101,7 @@ img {
   left: 20px;
   z-index: 1;
  }
- .color_yellow {
+ .color--yellow {
   color: #FAD264;;
  }
 /*end стили header*/

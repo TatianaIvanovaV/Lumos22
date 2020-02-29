@@ -2,20 +2,20 @@
   font-family: "LatoRegular";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/NewLato/latoregular.eot");
-  src: url("../fonts/NewLato/latoregular.eot?#iefix")format("embedded-opentype"),
-        url("../fonts/NewLato/latoregular.woff") format("woff"),
-        url("../fonts/NewLato/latoregular.ttf") format("truetype");
+  src: url("../fonts/Lato/latoregular.eot");
+  src: url("../fonts/Lato/latoregular.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Lato/latoregular.woff") format("woff"),
+        url("../fonts/Lato/latoregular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "LatoBold";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Lato/LatoBold.eot");
-  src: url("../fonts/Lato/LatoBold.eot?#iefix")format("embedded-opentype"),
-        url("../fonts/Lato/LatoBold.woff") format("woff"),
-        url("../fonts/Lato/LatoBold.ttf") format("truetype");
+  src: url("../fonts/Lato/latoblack.eot");
+  src: url("../fonts/Lato/latoblack.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Lato/latoblack.woff") format("woff"),
+        url("../fonts/Lato/latoblack.ttf") format("truetype");
 }
 
 @font-face {
@@ -66,44 +66,59 @@ li {
 .lumus-header__intro {
   color: #FFFFFF;
   font-size: 20px;
-  margin: 15px 0;
+  margin-top: 15px;
+  padding-top: 12px;
+  
+}
+.lumus-header__intro p {
+  margin-left: -9%;
 }
 .main-title {
   color: #fff;
-  padding-left: 24px;
+  padding-left: 20px;
  }
 .main-title__bold {
   font-family: "LatoBold";
-  font-weight: bolder;
-  font-size: 3.49rem;
   
-  
+  font-size: 3.435rem;
+  padding-left: 3px;
+  margin-top: 10px;
   }
 .main-title__font-china {
   font-family: "ChinaCyr";
   font-size: 60px;
   color: #FAD264;
-  
+  margin-bottom: 14px;
 }
 .color--white {
   color: white;
  }
  .main-title__stars{
-  position: relative;
-  z-index: 2;
+ position: relative;
+ z-index: 2;
+ padding-right: 23px;
+ margin-bottom: 17px;
  }
- .main-title__stars::before {
+ .main-title__stars img {
+width: auto;
+margin-right: 1.4px;
+ }
+ .main-title__stars::after {
   content: "";
-  width: 586px;
-  border: 0.5px solid #FAD264;
+  min-width: 585px;
+  border-top: 1px solid #FAD264;
   position: absolute;
-  top: 12px;
-  left: 20px;
+  top:4px;
+  left:15px;
   z-index: 1;
+
  }
  .color--yellow {
   color: #FAD264;;
  }
+.main-title__subtitle {
+
+}
 /*end стили header*/
 
 /*start rectangle*/

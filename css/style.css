@@ -12,10 +12,10 @@
   font-family: "LatoBold";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Lato/latoblack.eot");
-  src: url("../fonts/Lato/latoblack.eot?#iefix")format("embedded-opentype"),
-        url("../fonts/Lato/latoblack.woff") format("woff"),
-        url("../fonts/Lato/latoblack.ttf") format("truetype");
+  src: url("../fonts/Lato/latoheavy.eot");
+  src: url("../fonts/Lato/latoheavy.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Lato/latoheavy.woff") format("woff"),
+        url("../fonts/Lato/latoheavy.ttf") format("truetype");
 }
 
 @font-face {
@@ -55,14 +55,9 @@ li {
 }
 /*start стили header*/
 .header {
-  padding: 20px 0;
+  padding: 20px 0 16px;
   background: url('../imgs/img/headerBG.jpg') no-repeat center top;
- 
-  
-}
-.lumus-header__img {
- 
-}
+ }
 .lumus-header__intro {
   color: #FFFFFF;
   font-size: 20px;
@@ -80,15 +75,16 @@ li {
 .main-title__bold {
   font-family: "LatoBold";
   
-  font-size: 3.435rem;
+  font-size: 3.45rem;
   padding-left: 3px;
-  margin-top: 10px;
+  margin-top: 11px;
+  margin-bottom: 5px;
   }
 .main-title__font-china {
   font-family: "ChinaCyr";
   font-size: 60px;
   color: #FAD264;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .color--white {
   color: white;
@@ -97,7 +93,7 @@ li {
  position: relative;
  z-index: 2;
  padding-right: 23px;
- margin-bottom: 17px;
+ margin-bottom: 27px;
  }
  .main-title__stars img {
 width: auto;
@@ -105,40 +101,50 @@ margin-right: 1.4px;
  }
  .main-title__stars::after {
   content: "";
-  min-width: 585px;
+  width: 91.5%;
   border-top: 1px solid #FAD264;
   position: absolute;
-  top:4px;
+  top:5px;
   left:15px;
   z-index: 1;
 
  }
+ .main-title__subtitle {
+  margin-right: 28px;
+  line-height: 0.4rem;
+ }
+ .main-title__subtitle p:last-of-type {
+  margin: 42px 0 0;
+ }
  .color--yellow {
   color: #FAD264;;
  }
-.main-title__subtitle {
-
+.autor img{
+ position: relative;
+  bottom: 12px;
+  right:15px;
 }
 /*end стили header*/
 
 /*start rectangle*/
 .rectangle {
+ 
   width: 100%;
-  background: #FAD264;
+  background: #FAD264 ;
   }
 .rectangle__paragraph {
-  font-family: "LatoRegular";
-  font-size: 20px;
+  padding: 20px 0;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 /*end rectangle*/
 
 /*start presentation*/
 .presentation {
-  font-family: "LatoRegular";
+  
   background: url('../imgs/img/presentationBG.jpg') no-repeat center top;
   width: 100%;
-  min-height: 512px;
+  
   color: #FFFFFF;
 }
 /*end presentation*/

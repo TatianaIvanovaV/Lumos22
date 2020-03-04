@@ -149,27 +149,28 @@ margin-right: 1.4px;
   
   background: url('../imgs/img/presentationBG.jpg') no-repeat center top;
   width: 100%;
-  
   color: #FFFFFF;
 }
 .presentation-learn {
-  padding: 15px 0 5px;
+  padding: 15px 2px 5px;
 }
-.learn__basics {
-  
+.learn__basics img{
+  width: auto;
 }
 .learn__basics p {
-  padding: 12px 0 0;
- 
+  margin-top: 10px;
+}
+.learn__basics:last-of-type {
+  padding-left: 5px;
 }
 .cost__notes p {
   text-transform: uppercase;
+  margin: 2px 0 20px;
 }
 .cost__value {
-  padding-top: 8px;
   font-family: "LatoBold";
   font-size: 2.18rem;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 .order-notes__btn {
   margin-bottom: 28px;
@@ -180,16 +181,47 @@ margin-right: 1.4px;
   
 }
 .cost__timer p:last-of-type {
-  margin: 27px 0 45px;
+  margin: 27px 0 50px;
 }
 /*end presentation*/
 
 /*start differences*/
+.differences-title {
+  margin: 60px 0 10px;
+}
+.differences-title h2 {
+  font-weight: bold;
+  font-size: 2.2rem;
+  padding: 4px 40px 0;
+}
+.benefits img {
+  margin-bottom: 10px;
+ 
+}
+.benefits p {
+  margin-bottom: 65px;
+
+}
 
 /*end differences*/
-
-.separation-line {
-  text-align: center;
+.line {
+  position: relative;
+}
+.line:before {
+  content: "";
+  position: absolute;
+width: 38%;
+left: 9.4%;
+height: 4px;
+background: #E20505;
+}
+.line:after {
+  content: "";
+  position: absolute;
+width: 38%;
+right: 9.4%;
+height: 4px;
+background: #E20505;
 }
 /*start notes*/
 .notes {

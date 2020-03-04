@@ -50,9 +50,15 @@ li {
   margin: 0;
   padding: 0;
 }
-.button {
-
-}
+.color_yellow {
+  color: #FAD264;;
+ }
+ .color_white {
+  color: #FFFFFF;
+ }
+ .color_red {
+  color: #E20505;
+ }
 /*start стили header*/
 .header {
   padding-top: 20px;
@@ -86,9 +92,6 @@ li {
   color: #FAD264;
   margin-bottom: 16px;
 }
-.color--white {
-  color: white;
- }
  .main-title__stars{
  position: relative;
  z-index: 2;
@@ -119,10 +122,7 @@ margin-right: 1.4px;
  .main-title__subtitle p:last-of-type {
   margin: 42px 0 36px;
  }
- .color--yellow {
-  color: #FAD264;;
- }
-.autor img{
+ .autor img{
   
  position: relative;
   bottom: 12px;
@@ -204,8 +204,11 @@ margin-right: 1.4px;
 }
 
 /*end differences*/
+
+/*start notes*/
 .line {
-  position: relative;
+ margin-bottom: 50px;
+
 }
 .line:before {
   content: "";
@@ -223,22 +226,34 @@ right: 9.4%;
 height: 4px;
 background: #E20505;
 }
-/*start notes*/
-.notes {
-  font-family: "LatoRegular";
+.notes__title h2 {
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-bottom: 57px;
+}
+.notes__item {
+  padding: 40px 25px;
+  border: 3px solid #FAD264;
+  min-height: 647px;
+}
+.notes__item h5 {
+  font-weight: bold;
+}
+.notes__item h5:last-of-type {
+  padding: 0 36px;
 }
 /*end notes*/
 
 /*start pros*/
 .pros {
   background: #EBEBEB;
-  font-family: "LatoRegular";
+  
 }
 /*end pros*/
 
 /*start by-notes*/
 .order-notes {
-  font-family: "LatoRegular";
+
   margin: 60px auto 0;
   border: 3px solid #E20505;
   width: 754px;
@@ -276,7 +291,7 @@ color: #E20505;
 
 /*start personal-account*/
 .personal-account {
-  font-family: "LatoRegular";
+  
   background: url('../imgs/img/personal-accBG.jpg') no-repeat center top;
   width: 100%;
 }
@@ -284,7 +299,7 @@ color: #E20505;
 
 /*start footer*/
 .foot {
-font-family: "LatoRegular";
+
 background: url('../imgs/img/footerBG.jpg') no-repeat center top;
 width: 100%;
 color: #FFFFFF;

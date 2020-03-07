@@ -69,7 +69,9 @@ li {
   padding-bottom: 30px;
   border: 0;
 }
-
+button:active, button:focus {
+  outline: none;
+}
 /*start стили header*/
 .header {
   padding-top: 20px;
@@ -345,24 +347,67 @@ list-style: none;
 .foot {
 
 background: url('../imgs/img/footerBG.jpg') no-repeat center top;
-width: 100%;
 color: #FFFFFF;
 }
-.foot__cross-line {
-  background: #FAD264;
-  height: 85.05px;
-  width: 2px;
-  margin-top: 38.56px;
- }
+.contacts {
+  margin-top: 35px;
+  font-size: 1.14rem;
+}
+.foot__service p {
+text-transform: uppercase;
+}
+.foot__service a, .foot__call a {
+  color: #FAD264;
+  text-decoration: none;
+  
+}
+.foot__service a:hover {  
+  padding-bottom: 2px; border-bottom: 1px solid #FAD264;
+}
 
+.foot__call {  
+position: relative;
+top: 0px;
+margin-right: 70px;
+left: 97px;
+text-transform: uppercase;
+}
+.foot__call:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -67.5px;
+  height: 84px;
+width: 2px;
+  background: #FAD264;
+}
+.contacts__tel {
+  font-size: 1.5rem;
+  margin: -3px 0 12px -2px;
+}
+.foot__call a:hover {
+  border-bottom: 3px solid #FAD264;
+}
+.foot__call p:last-of-type {
+  margin: 0 0 0 -2px;
+}
 .foot__official-data {
- 
+  margin-top: 8px;
+}
+.foot__official-data p:first-of-type {
+  margin-bottom: 14px;
+}
+.foot__official-data a {
+  margin-top: -15px;
+  color: rgba(255, 255, 255, 0.5393); 
+}
+.foot__official-data, .foot__subtitle {
   font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 14px;
   color: rgba(255, 255, 255, 0.5393);
   }
 .foot__subtitle {
- 
-  font-family: 'Roboto';
-  color: rgba(255, 255, 255, 0.5393);
+
 }
 /*end footer*/

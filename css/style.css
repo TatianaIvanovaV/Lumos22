@@ -69,6 +69,12 @@ li {
   padding-bottom: 30px;
   border: 0;
 }
+.btn:hover {
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+.btn:active {
+  background: #CBCBCB;
+}
 button:active, button:focus {
   outline: none;
 }
@@ -218,9 +224,11 @@ margin-right: 1.4px;
 /*start notes*/
 .line {
  margin-bottom: 50px;
-
+ width: auto;
+ position: relative;
 }
-.line:before {
+
+*.line:before {
   content: "";
   position: absolute;
 width: 45%;
@@ -253,10 +261,11 @@ background: #E20505;
   margin: 38px 45px 0 50px;
 }
 .notes-item img {
-margin: -2px 0 22px 4px;
+margin: -2px 0 23px 4px;
 }
-.notes-item__subtitle {
-  margin: 0 30px 0 30px;
+.notes-item__subtitle p {
+  display: block;
+  margin: 0 25px 0 37px;
 }
 /*end notes*/
 
@@ -407,7 +416,4 @@ width: 2px;
   line-height: 14px;
   color: rgba(255, 255, 255, 0.5393);
   }
-.foot__subtitle {
-
-}
 /*end footer*/

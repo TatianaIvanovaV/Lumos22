@@ -92,49 +92,7 @@ li {
   box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
   }
 /*start стили header*/
-@media (max-width: 480px) {
-  .differences, .notes, .pros, .buy-notes, .personal-account, .foot {
-    display: none;
-  }
-  .container {
-  width: 100%;
-  }
-  .col-12 {
-    width: 100%;
-    margin: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    box-sizing: border-box;
 
-  }
-  .header {
-    background: url('../imgs/mobileHeader.jpg') no-repeat center top;
-    padding-top: 26px;
-  }
-  /*.lumus-header__img img {
-    position: relative;
-  }
-  .lumus-header__img img:before{
-    content: "";
-    position: absolute;
-    width: 63px;
-    height: 2px;
-    background: #FFC34B;
-    top: -10px;
-    left: 25px;
-  }
-  .lumus-header__img img:after{
-    content: "";
-    position: absolute;
-    width: 63px;
-    height: 1px;
-    background: #FFC34B;
-  }*/
-  .main-title {
-    
-  }
-}
 .header {
   padding-top: 20px;
   background: url('../imgs/img/headerBG.jpg') no-repeat center top;
@@ -193,6 +151,9 @@ li {
  }
  .main-title__subtitle p:last-of-type {
   margin: 43px 0 36px;
+ }
+ .main-title__autor-img {
+display: none;
  }
  .autor img{
  width: 100%;  
@@ -475,3 +436,79 @@ width: 2px;
    margin-right: 3px;
  } 
 /*end footer*/
+@media (max-width: 480px) {
+
+  .header {
+    background: url('../imgs/mobileHeader.jpg') no-repeat center top;
+  }
+  .differences, .notes, .pros, .buy-notes, .personal-account, .foot, .autor {
+    display: none;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+  }
+ 
+  .col-12 {
+   display: flex;
+    justify-content: center;
+    
+  }
+  
+  /*.lumus-header__img img {
+    position: relative;
+  }
+  .lumus-header__img img:before{
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 2px;
+    background: #FFC34B;
+    top: -10px;
+    left: 25px;
+  }
+  .lumus-header__img img:after{
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 1px;
+    background: #FFC34B;
+  }*/
+  .lumus-header__intro, .main-title__subtitle  {
+    font-size: 16px;
+    line-height: 16px;
+
+  }
+  .main-title__bold,.main-title__font-china {
+    font-size: 20px;
+    
+  }
+  .main-title__subtitle p {
+    
+  }
+  .main-title__subtitle p:last-of-type {
+    font-size: 12px;
+  }
+  .main-title__autor-img {
+    display: block;
+  }
+  .main-title__autor-img img{
+    height: auto;
+    max-width: 230px;
+  }
+  .presentation {
+    background: url('../imgs/mobilePresentation.jpg') no-repeat center top;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .butn {
+    max-width: 230px;
+    font-size: 18px;
+line-height: 22px;
+padding: 22px 0 23px;
+  }
+}

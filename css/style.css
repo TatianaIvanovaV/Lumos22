@@ -91,6 +91,9 @@ li {
   outline-style: none!important;
   box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
   }
+  .mobile {
+    display: none;
+  }
 /*start стили header*/
 
 .header {
@@ -156,9 +159,10 @@ li {
 display: none;
  }
  .autor img{
- width: 100%;  
-   
- 
+ width: auto;
+   position: relative;
+   top: -10px;
+   right:15px; 
 }
 .rectangle {
   background: #FAD264;
@@ -437,78 +441,156 @@ width: 2px;
  } 
 /*end footer*/
 @media (max-width: 480px) {
-
+ 
+  .container {
+  max-width: 230px;
+  }
   .header {
     background: url('../imgs/mobileHeader.jpg') no-repeat center top;
+    font-size: 16px;
+    line-height: 19px;
   }
   .differences, .notes, .pros, .buy-notes, .personal-account, .foot, .autor {
     display: none;
   }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    
-  }
- 
   .col-12 {
-   display: flex;
-    justify-content: center;
-    
+    text-align: center; 
   }
   
-  /*.lumus-header__img img {
+  .lumus-header__img img {
+    max-width: 29%;
+    margin-top: 6px;
     position: relative;
-  }
-  .lumus-header__img img:before{
-    content: "";
-    position: absolute;
-    width: 63px;
-    height: 2px;
-    background: #FFC34B;
-    top: -10px;
-    left: 25px;
-  }
-  .lumus-header__img img:after{
-    content: "";
-    position: absolute;
-    width: 63px;
-    height: 1px;
-    background: #FFC34B;
-  }*/
-  .lumus-header__intro, .main-title__subtitle  {
-    font-size: 16px;
-    line-height: 16px;
-
-  }
-  .main-title__bold,.main-title__font-china {
-    font-size: 20px;
     
+   }
+  .lumus-header__img::before{
+    content: "";
+    width: 63px;
+    border-top: 1px solid #FAD264;
+    position: absolute;
+    top: 41px;
+    left: 15px;
+  }
+  .lumus-header__img::after{
+    content: "";
+    width: 63px;
+    border-top: 1px solid #FAD264;
+    position: absolute;
+    top: 41px;;
+    right: 15px;
+    }
+  .lumus-header__intro {
+    padding: 0 40px;
+  }
+  .lumus-header__intro p {
+    margin-left: 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .main-title {
+    padding-left: 0;
+   }
+  .main-title__bold, .main-title__font-china {
+    font-size: 20px;
+  }
+  .main-title__bold {
+    margin: 2px 0 5px;
+    padding: 0;
+  }
+  .main-title__font-china {
+    margin: 0 0 11px;
+  }
+  .main-title__stars {
+    padding: 0;
+    margin-bottom: 21px; 
+  }
+  .main-title__stars img {   
+    margin-right: 0.39px;
+    max-width: 5.49px;
+    height: 6px;
+   }
+  .main-title__stars::after {
+    width: 100%;
+    left: 0px;
+    top: 1px;
+  }
+  .main-title__subtitle  {
+    margin: 0px;
+    font-size: 16px;
+  line-height: 19px;
   }
   .main-title__subtitle p {
-    
+    margin-bottom: 0px;
+    padding: 0 5px;
   }
-  .main-title__subtitle p:last-of-type {
-    font-size: 12px;
+  .mobile {
+    display: block;
+  }
+  .main-title__subtitle p:first-of-type {
+    margin-right: 0px;
+    
   }
   .main-title__autor-img {
     display: block;
+    margin-top: 4px;
+    margin-bottom: 17px;
   }
   .main-title__autor-img img{
     height: auto;
-    max-width: 230px;
+    max-width: 94%;
+  }
+  .main-title__subtitle p:last-of-type {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 26px;
+  }
+  .rectangle {
+    
+  }
+  .rectangle__paragraph {
+    padding: 10px 15px 12px;
+    font-size: 16px;
+    line-height: 19px;
   }
   .presentation {
     background: url('../imgs/mobilePresentation.jpg') no-repeat center top;
     font-size: 16px;
     line-height: 19px;
+    padding-top: 16px;
   }
-
+  .learn__basics {
+    margin: 0;
+    padding-bottom: 7px;
+  }
+  .learn__basics img {
+    margin-bottom: 10px;
+  }
+  .cost__notes {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .cost__notes p {
+    margin: 20px 0 18px;
+    
+  }
+  .cost__value {
+    margin: 2px 4px 32px 0;
+  }
   .butn {
     max-width: 230px;
     font-size: 18px;
-line-height: 22px;
-padding: 22px 0 23px;
+    line-height: 22px;
+    padding: 22px 0 19px;
+  }
+  .cost-notes__btn {
+    margin: 0 0 19px;
+  }
+  .cost__timer {
+    line-height: 19px; 
+  }
+  .cost__timer p:last-of-type {
+    margin: 19px 0 46px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }

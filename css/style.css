@@ -91,10 +91,10 @@ li {
   outline-style: none!important;
   box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
   }
-  .mobile {
+.mobile {
     display: none;
   }
-/*start стили header*/
+/*start header*/
 
 .header {
   padding-top: 20px;
@@ -105,72 +105,59 @@ li {
   font-size: 20px;
   margin-top: 14px;
   padding-top: 12px;
-  
-}
-.lumus-header__intro p {
-  margin-left: -9%;
 }
 .main-title {
   color: #fff;
-  padding-left: 20px;
  }
-.main-title__bold {
+ .main-title__bold {
   font-family: "LatoBold";
-  font-size: 3.46rem;
-  padding-left: 3px;
+  font-size: 4.05vw;
   margin-top: 10px;
   margin-bottom: 5px;
-  }
+}
 .main-title__font-china {
   font-family: "ChinaCyr";
-  font-size: 60px;
+  font-size: 4.4vw;
   color: #FAD264;
   margin-bottom: 16px;
 }
  .main-title__stars{
  position: relative;
  z-index: 2;
- padding-right: 20px;
- margin-bottom: 26px;
+ margin-bottom: 18px;
  }
  .main-title__stars img {   
   margin-right: 1.5px;
  }
  .main-title__stars::after {
   content: "";
-  width: 91.5%;
+  width: 586px;
   border-top: 1px solid #FAD264;
   position: absolute;
   top:4px;
-  left:15px;
   z-index: 1;
  }
- .main-title__subtitle {
-  margin-right: 25px;
-  line-height: 0.4rem;
- }
- .main-title__subtitle p:first-of-type {
-  margin-right: 3px; 
+ .main-title__subtitle p {
+   margin-bottom: 0px;
  }
  .main-title__subtitle p:last-of-type {
-  margin: 43px 0 36px;
+  margin: 26px 0 29px;
  }
  .main-title__autor-img {
 display: none;
  }
- .autor img{
- width: auto;
-   position: relative;
-   top: -10px;
-   right:15px; 
+.autor img {
+width: auto;
+margin-top: -11px;
+margin-left: -9px;
 }
 .rectangle {
   background: #FAD264;
 }
 .rectangle__paragraph {
- padding: 20px 4px 20px 0;
+ padding: 20px 7px 20px 0;
  font-family: "LatoMedium";
- font-size: 1.246rem;
+ font-size: 20px;
  text-transform: uppercase;
 }
 /*end стили header*/
@@ -238,7 +225,9 @@ display: none;
  
 }
 .line img {
-  width: auto;
+  max-width: 100%;
+  height: auto;
+
 }
 .line:before {
   content: "";
@@ -343,8 +332,8 @@ font-weight: bold;
 font-size: 1.525rem;
 margin-bottom: 20px;
 }
-.account-autor {
-  max-width:100%;
+.account-autor img {
+  width:100%;
   height: auto;
 }
 .account-benefits {
@@ -483,7 +472,6 @@ width: 2px;
     padding: 0 40px;
   }
   .lumus-header__intro p {
-    margin-left: 0;
     font-size: 16px;
     line-height: 19px;
   }
@@ -543,9 +531,6 @@ width: 2px;
     font-size: 12px;
     line-height: 14px;
     margin: 0 0 26px;
-  }
-  .rectangle {
-    
   }
   .rectangle__paragraph {
     padding: 10px 15px 12px;

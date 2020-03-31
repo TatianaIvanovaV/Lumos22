@@ -70,7 +70,6 @@ li {
  }
  .butn {
   width: 362px;
-  font-size: 1.125rem;
   text-transform: uppercase;
   background: #FAD264;
   border-radius: 50px;
@@ -94,12 +93,26 @@ li {
 .mobile {
     display: none;
   }
+  h2 {
+  font-family: "LatoMedium";
+  font-size: 35px;
+  }
+  h4 {
+    font-size: 24px;
+    font-family: "LatoBold";
+  }
 /*start header*/
 
 .header {
   padding-top: 20px;
   background: url('../imgs/img/headerBG.jpg') no-repeat center top;
  }
+ .lumus-header__img {
+   
+ }
+ .lumus-header__img img{
+  max-width: 100%;
+}
 .lumus-header__intro {
   color: #FFFFFF;
   font-size: 20px;
@@ -120,6 +133,7 @@ li {
   font-size: 4.4vw;
   color: #FAD264;
   margin-bottom: 16px;
+  white-space: nowrap;
 }
  .main-title__stars{
  position: relative;
@@ -131,7 +145,7 @@ li {
  }
  .main-title__stars::after {
   content: "";
-  width: 586px;
+  width: 90%;
   border-top: 1px solid #FAD264;
   position: absolute;
   top:4px;
@@ -139,6 +153,10 @@ li {
  }
  .main-title__subtitle p {
    margin-bottom: 0px;
+   
+ }
+ .main-title__subtitle p:first-of-type {
+  padding-right: 4px;
  }
  .main-title__subtitle p:last-of-type {
   margin: 26px 0 29px;
@@ -180,13 +198,13 @@ margin-left: -9px;
 }
 .cost__value {
   font-family: "LatoBold";
-  font-size: 2.18rem;
-  margin-right: 2px;
+  font-size: 35px;
   margin-bottom: 30px;
+  margin-right: 4px;
 }
 .cost-notes__btn {
   margin-bottom: 29px;
-  margin-right: 4px;
+  margin-right: 7px;
   color: #000000;
 }
 .cost a,
@@ -206,8 +224,6 @@ margin-left: -9px;
   margin: 61px 0 13px;
 }
 .differences-title h2 {
-  font-family: "LatoMedium";
-  font-size: 2.19rem;
   padding:0 40px;
 }
 .benefits img {
@@ -246,8 +262,6 @@ height: 4px;
 background: #E20505;
 }
 .notes__title h2 {
-  font-weight: bold;
-  font-size: 2.2rem;
   margin-bottom: 57px;
 }
 .notes-item {
@@ -281,10 +295,6 @@ margin: 0 0 22px 4px;
 .pros-item {
 margin-bottom: 60px;
 }
-.pros__title h2 {
-    font-weight: bold;
-    font-size: 2.2rem;
-}
 .pros-item img{
 margin-bottom: 19px;
 }
@@ -299,24 +309,24 @@ margin-bottom: 19px;
   border: 3px solid #E20505;
   min-height: 418px;
 }
-.order-notes__title {
-  font-weight: bold;
-  margin-top: 37px;
-  font-size: 1.54rem;
- 
+.order-notes h4 {
+  margin-top: 38px;
 }
 .order-notes__cost {
   font-family: "LatoBold";
-  font-size: 2.18rem;
+  font-size: 35px;
   margin-top: 13px;
 }
 .order-notes__btn {
   margin-top: 30px;
-  margin-left: -2px;
+  margin-left: -6px;
 }
 .order-notes__sub {
-  margin-top: 10px;
-  line-height: 3.35rem;
+  margin-top: 25px;
+}
+.order-notes__sub p:last-of-type {
+margin-top: 45px;
+font-weight: bold;
 }
 /*end buy-notes*/
 
@@ -325,15 +335,13 @@ margin-bottom: 19px;
   background: url('../imgs/img/personal-accBG.jpg') no-repeat center top;
 }
 .account-title {
-  margin-top: 60px;
+  margin-top: 61px;
 }
 .account-title h4{
-font-weight: bold;
-font-size: 1.525rem;
 margin-bottom: 20px;
 }
 .account-autor img {
-  width:100%;
+  max-width:100%;
   height: auto;
 }
 .account-benefits {

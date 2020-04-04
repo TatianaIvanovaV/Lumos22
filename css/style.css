@@ -52,11 +52,10 @@ body {
     box-sizing: inherit;
 }
 .container {
-  padding: 0;
+  padding: 0px;
+  /*border: 2px solid black;*/
 }
-
-ul,
-li {
+ul, li {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -464,7 +463,21 @@ width: 2px;
     
   }
 }*/
+ @media (max-width: 768px) {
+  .account-autor img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+  }
+  .account-benefits li {
+   left: 46px;
+  }
+}
 @media (max-width: 576px) {
+ body {
+    font-size: 16px;
+    line-height: 19px;
+  }
   .header {
     background: url('../imgs/mobileHeader.jpg') no-repeat center top;
     background-size: cover;
@@ -490,7 +503,7 @@ width: 2px;
     border-top: 1px solid #FAD264;
     position: absolute;
     top: 41px;
-    right: 0px;
+    right: 5%;
     }
   .autor {
     display: none;
@@ -499,19 +512,12 @@ width: 2px;
     display: flex;
     flex-direction: column-reverse;
   }
-  .account-autor img {
-    max-width: 100%;
-    height: auto;
-  }
+  
+  
 }
 @media (max-width: 480px) {
- 
   .container {
   max-width: 230px;
-  }
-  .header {
-    font-size: 16px;
-    line-height: 19px;
   }
   .differences, .notes, .pros, .buy-notes, .personal-account, .foot {
     display: none;
@@ -560,8 +566,6 @@ width: 2px;
   }
   .main-title__subtitle  {
     margin: 0px;
-    font-size: 16px;
-  line-height: 19px;
   }
   .main-title__subtitle p {
     margin-bottom: 0px;
@@ -571,8 +575,7 @@ width: 2px;
     display: block;
   }
   .main-title__subtitle p:first-of-type {
-    margin-right: 0px;
-    
+    margin-right: 0px; 
   }
   .main-title__autor-img {
     display: block;
@@ -596,8 +599,6 @@ width: 2px;
   .presentation {
     background: url('../imgs/mobilePresentation.jpg') no-repeat center top;
     background-size: cover;
-    font-size: 16px;
-    line-height: 19px;
     padding-top: 16px;
   }
   .learn__basics {

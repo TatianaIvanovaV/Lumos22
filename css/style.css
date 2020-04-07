@@ -102,6 +102,9 @@ ul, li {
     font-size: 24px;
     font-family: "LatoBold";
   }
+  .transfer {
+    display: none;
+  }
 /*start header*/
 
 .header {
@@ -162,7 +165,6 @@ ul, li {
  .main-title__autor-img {
 display: none;
  }
-
 .autor img {
 max-width: 102%;
 height: auto;
@@ -244,7 +246,6 @@ margin-left: -9px;
 .line img {
   max-width: 100%;
   height: auto;
-
 }
 .line:before {
   content: "";
@@ -464,6 +465,9 @@ width: 2px;
   }
 }*/
  @media (max-width: 768px) {
+  .autor {
+    display: none;
+  }
   .account-autor img {
     max-width: 100%;
     height: auto;
@@ -472,12 +476,28 @@ width: 2px;
   .account-benefits li {
    left: 46px;
   }
+  .main-title__autor-img {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 17px;
+  }
+  .main-title__autor-img img{
+    height: auto;
+    max-width: 100%;
+  }
+  h2 {
+    font-size: 28px;
+    }
+    .transfer {
+      display: block;
+    }
 }
 @media (max-width: 576px) {
  body {
     font-size: 16px;
     line-height: 19px;
   }
+  
   .header {
     background: url('../imgs/mobileHeader.jpg') no-repeat center top;
     background-size: cover;
@@ -505,6 +525,12 @@ width: 2px;
     top: 41px;
     right: 5%;
     }
+  .lumus-header__intro { 
+      font-size: 18px;
+   }
+   .main-title__bold, .main-title__font-china {
+    font-size: 40px;
+  }
   .autor {
     display: none;
   }
@@ -512,10 +538,17 @@ width: 2px;
     display: flex;
     flex-direction: column-reverse;
   }
-  
-  
+  .line img {
+    max-width: 100%;
+    height: auto;
+  }
+  .line:before, .line:after {
+  width: 42%;
+  }
+   
 }
 @media (max-width: 480px) {
+  
   .container {
   max-width: 230px;
   }
@@ -535,8 +568,6 @@ width: 2px;
     }
   .lumus-header__intro {
     padding: 0 40px;
-  }
-  .lumus-header__intro p {
     font-size: 16px;
     line-height: 19px;
   }
@@ -577,13 +608,7 @@ width: 2px;
   .main-title__subtitle p:first-of-type {
     margin-right: 0px; 
   }
-  .main-title__autor-img {
-    display: block;
-    margin-top: 4px;
-    margin-bottom: 17px;
-  }
   .main-title__autor-img img{
-    height: auto;
     max-width: 94%;
   }
   .main-title__subtitle p:last-of-type {

@@ -91,6 +91,9 @@ ul, li {
   outline-style: none!important;
   box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
   }
+  img {
+    height: auto;
+  }
 .mobile {
     display: none;
   }
@@ -167,7 +170,6 @@ display: none;
  }
 .autor img {
 max-width: 102%;
-height: auto;
 margin-top: -11px;
 margin-left: -9px;
 }
@@ -245,7 +247,6 @@ margin-left: -9px;
 }
 .line img {
   max-width: 100%;
-  height: auto;
 }
 .line:before {
   content: "";
@@ -270,7 +271,6 @@ background: #E20505;
   margin-bottom: 70px;
   border: 3px solid #FAD264;
   height: 647px;
-  
 }
 .notes-item h5 {
   font-weight: bold;
@@ -292,8 +292,7 @@ margin: 0 0 22px 4px;
   background: #EBEBEB;
 }
 .pros__title {
-  margin: 60px 0 29px;
-  
+  margin: 60px 0 29px; 
 }
 .pros-item {
 margin-bottom: 60px;
@@ -346,7 +345,6 @@ margin-bottom: 20px;
 }
 .account-autor img {
   width: 120%;
-  height: auto;
   margin-left: -3px;
 }
 .account-benefits {
@@ -464,14 +462,25 @@ width: 2px;
     
   }
 }*/
+@media (max-width: 992px) {
+  .line {
+    display: none;
+  }
+}
  @media (max-width: 768px) {
   .autor {
     display: none;
   }
   .account-autor img {
     max-width: 100%;
-    height: auto;
     margin-left: 0px;
+  }
+  .autor {
+    display: none;
+  }
+  .personal-account-content {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .account-benefits li {
    left: 46px;
@@ -482,22 +491,26 @@ width: 2px;
     margin-bottom: 17px;
   }
   .main-title__autor-img img{
-    height: auto;
     max-width: 100%;
   }
   h2 {
-    font-size: 28px;
+    font-size: 26px;
     }
-    .transfer {
+  .transfer {
       display: block;
-    }
+  }
+  .benefits {
+margin: 0 40px;
+  }
+  .line:before, .line:after {
+    max-width: 43.5%;
+  }  
 }
 @media (max-width: 576px) {
- body {
+  body {
     font-size: 16px;
     line-height: 19px;
   }
-  
   .header {
     background: url('../imgs/mobileHeader.jpg') no-repeat center top;
     background-size: cover;
@@ -511,7 +524,7 @@ width: 2px;
    }
   .lumus-header__img::before{
     content: "";
-    width: 30%;
+    width: 33%;
     border-top: 1px solid #FAD264;
     position: absolute;
     top: 41px;
@@ -519,7 +532,7 @@ width: 2px;
   }
   .lumus-header__img::after{
     content: "";
-    width: 30%;
+    width: 33%;
     border-top: 1px solid #FAD264;
     position: absolute;
     top: 41px;
@@ -531,21 +544,68 @@ width: 2px;
    .main-title__bold, .main-title__font-china {
     font-size: 40px;
   }
-  .autor {
-    display: none;
+  .main-title__autor-img img {
+    max-width: 70%;
+    margin-top: 10px;
   }
-  .personal-account-content {
-    display: flex;
-    flex-direction: column-reverse;
+  .rectangle__paragraph {
+    padding-left: 0px;
+    font-size: 18px;
+    line-height: 24px;
   }
-  .line img {
-    max-width: 100%;
-    height: auto;
+  .presentation {
+    background: url('../imgs/mobilePresentation.jpg') no-repeat center top;
+    background-size: cover;
+    padding-top: 20px;
   }
-  .line:before, .line:after {
-  width: 42%;
+  .learn__basics {
+    margin: 10px 30px;
   }
-   
+  .cost__notes p {
+    margin: 20px 0 18px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .cost__value {
+    margin: 2px 4px 32px 0;
+  }
+  .butn {
+    font-size: 18px;
+  }
+  .cost__timer p:last-of-type {
+    margin: 20px 0 40px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .notes-item {
+    margin: 0 auto 25px;
+    max-width: 350px;
+    max-height: 520px;
+  }
+  .notes-item img {
+    max-width: 70%;
+    }
+  .pros-item {
+      margin: 0 40px 30px;
+  }
+  .foot__call:before {
+display: none;
+  } 
+  .pros-item img{
+    max-width: 60%;
+    margin-bottom: 10px;
+  }
+  .order-notes {
+    margin: 50px auto;
+    max-width: 440px;
+    min-height: 380px;
+  }
+  .order-notes__sub {
+    margin-top: 25px;
+  }
+  .order-notes__sub p:last-of-type {
+    margin-top: 25px;
+  }
 }
 @media (max-width: 480px) {
   
@@ -610,6 +670,7 @@ width: 2px;
   }
   .main-title__autor-img img{
     max-width: 94%;
+    margin-top: 0px;
   }
   .main-title__subtitle p:last-of-type {
     font-size: 12px;
@@ -622,8 +683,6 @@ width: 2px;
     line-height: 19px;
   }
   .presentation {
-    background: url('../imgs/mobilePresentation.jpg') no-repeat center top;
-    background-size: cover;
     padding-top: 16px;
   }
   .learn__basics {
@@ -633,32 +692,13 @@ width: 2px;
   .learn__basics img {
     margin-bottom: 10px;
   }
-  .cost__notes {
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .cost__notes p {
-    margin: 20px 0 18px;
-    
-  }
-  .cost__value {
-    margin: 2px 4px 32px 0;
-  }
   .butn {
     max-width: 230px;
-    font-size: 18px;
     line-height: 22px;
     padding: 22px 0 19px;
-  }
-  .cost-notes__btn {
-    margin: 0 0 19px;
+    margin-bottom:19px;
   }
   .cost__timer {
     line-height: 19px; 
-  }
-  .cost__timer p:last-of-type {
-    margin: 20px 0 40px;
-    font-size: 18px;
-    line-height: 22px;
   }
 }

@@ -52,7 +52,7 @@ body {
     box-sizing: inherit;
 }
 .container {
-  padding: 0px;
+  
   /*border: 2px solid black;*/
 }
 ul, li {
@@ -113,7 +113,10 @@ ul, li {
 .header {
   padding-top: 20px;
   background: url('../imgs/img/headerBG.jpg') no-repeat center top;
-  background-size: cover;
+ }
+ .lumus-header__img {
+   display: flex;
+   justify-content: start;
  }
 .lumus-header__img img{
   max-width: 100%;
@@ -177,10 +180,12 @@ margin-left: -9px;
   background: #FAD264;
 }
 .rectangle__paragraph {
- padding: 20px 7px 20px 0;
  font-family: "LatoMedium";
  font-size: 20px;
  text-transform: uppercase;
+}
+.rectangle__paragraph p {
+  margin: 20px 7px 20px 0;
 }
 /*end стили header*/
 
@@ -226,10 +231,10 @@ margin-left: -9px;
 
 /*start differences*/
 .differences-title {
-  margin: 61px 0 13px;
+  margin: 61px 0 21px;
 }
 .differences-title h2 {
-  padding:0 40px;
+  margin: 0 40px;
 }
 .benefits img {
   margin-bottom: 10px;
@@ -344,13 +349,14 @@ font-weight: bold;
 margin-bottom: 20px;
 }
 .account-autor img {
-  width: 120%;
+  max-width: 120%;
   margin-left: -3px;
 }
 .account-benefits {
-margin-top: 19px;
+margin-top: 20px;
 list-style: none;
 line-height: 22px;
+margin-left: -7px;
 }
 .account-benefits li {
   position: relative;
@@ -378,11 +384,12 @@ color: #FFFFFF;
 .contacts {
   margin-top: 35px;
   font-family: "LatoMedium";
+  
 }
 .foot__service p {
 text-transform: uppercase;
 }
-.foot__service a, .foot__call a {
+.foot__service a, .contacts__tel a {
   color: #FAD264;
   text-decoration: none; 
 }
@@ -410,11 +417,16 @@ width: 2px;
   margin: -1px 0 13px -2px;
   font-size: 24px;
 }
-.foot__call a:hover {
+.contacts__tel a:hover {
   border-bottom: 2px solid #FAD264;
 }
-.foot__call p:last-of-type {
+.contacts__modal a {
   margin-left: -2px;
+  color: white;
+  text-decoration: none;
+}
+.contacts__modal a:hover {
+  border-bottom: 2px solid white;
 }
 .foot__official-data {
   margin: 8px 0 0 -8px;
@@ -439,9 +451,11 @@ width: 2px;
   color: rgba(255, 255, 255, 0.5393);
   }
  .foot__subtitle {
-   margin-right: 3px;
+   margin: -2px 0 0 -6px;
  } 
 /*end footer*/
+
+
 /*@media (max-width: 992px) {
   .autor {
     display: flex;
@@ -452,69 +466,21 @@ width: 2px;
     height: auto;
   }
 }
-@media (max-width: 768px) {
-  .autor {
-    display: none;
-  }
-  
-  }
-  .cost__notes {
-    
-  }
-}*/
-@media (max-width: 992px) {
+*/
+
+
+@media screen and (max-width: 992px) {
   .line {
     display: none;
   }
 }
- @media (max-width: 768px) {
-  .autor {
-    display: none;
-  }
-  .account-autor img {
-    max-width: 100%;
-    margin-left: 0px;
-  }
-  .autor {
-    display: none;
-  }
-  .personal-account-content {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .account-benefits li {
-   left: 46px;
-  }
-  .main-title__autor-img {
-    display: block;
-    margin-top: 4px;
-    margin-bottom: 17px;
-  }
-  .main-title__autor-img img{
-    max-width: 100%;
-  }
-  h2 {
-    font-size: 26px;
-    }
-  .transfer {
-      display: block;
-  }
-  .benefits {
-margin: 0 40px;
-  }
-  .line:before, .line:after {
-    max-width: 43.5%;
-  }  
-}
-@media (max-width: 576px) {
-  body {
-    font-size: 16px;
-    line-height: 19px;
-  }
-  .header {
-    background: url('../imgs/mobileHeader.jpg') no-repeat center top;
-    background-size: cover;
-  }
+
+
+ @media screen and (max-width: 768px) {
+  
+  .main-title__bold, .main-title__font-china {
+    font-size: 40px;
+  } 
   .lumus-header__img {
     text-align: center;
     position: relative;
@@ -538,20 +504,98 @@ margin: 0 40px;
     top: 41px;
     right: 5%;
     }
+  .autor, .foot__call:before, .foot__official-data br{
+    display: none;
+  }
+ 
+  .main-title__autor-img {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 17px;
+  }
+  .main-title__autor-img img{
+    max-width: 100%;
+  }
+  .transfer {
+      display: block;
+  }
+  .notes-item {
+    margin: 0 auto 25px;
+    max-width: 370px;
+    max-height: 570px;
+  }
+  .notes-item img {
+    max-width: 70%;
+    }
+  .benefits {
+  margin: 0 40px;
+  }
+  .personal-account-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .account-benefits {
+    margin: 19px 40px 0;
+    
+    }
+  .account-benefits li {
+   left: 26px;
+  }
+  .account-autor img {
+    max-width: 100%;
+    margin-left: 0px;
+  }
+  
+  .foot__call {
+    top: 0px;
+    margin-right: 0px;
+    left: 0px;
+  }
+  
+  .foot__official-data {
+    margin: 0px;
+    
+  }
+   
+}
+
+
+@media screen and (max-width: 576px) {
+  .container {
+    border: 1px solid black;
+   
+  }
+  h2 {
+    font-size: 26px;
+    }
+  h4 {
+    font-size: 22px;
+  }
+  body {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .header {
+    background: url('../imgs/mobileHeader.jpg') no-repeat center top;
+    background-size: cover; 
+  }
   .lumus-header__intro { 
       font-size: 18px;
    }
    .main-title__bold, .main-title__font-china {
     font-size: 40px;
   }
+  
   .main-title__autor-img img {
     max-width: 70%;
     margin-top: 10px;
   }
   .rectangle__paragraph {
-    padding-left: 0px;
     font-size: 18px;
     line-height: 24px;
+  }
+  .rectangle__paragraph p {
+    margin: 20px 40px;
   }
   .presentation {
     background: url('../imgs/mobilePresentation.jpg') no-repeat center top;
@@ -582,9 +626,6 @@ margin: 0 40px;
     max-width: 350px;
     max-height: 520px;
   }
-  .notes-item img {
-    max-width: 70%;
-    }
   .pros-item {
       margin: 0 40px 30px;
   }
@@ -600,14 +641,29 @@ display: none;
     max-width: 440px;
     min-height: 380px;
   }
+  .order-notes__btn {
+    max-width: 290px;
+  }
   .order-notes__sub {
     margin-top: 25px;
   }
   .order-notes__sub p:last-of-type {
     margin-top: 25px;
   }
+  .account-title {
+    margin-top: 0px;
+  }
+  .contacts {
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+   
 }
-@media (max-width: 480px) {
+
+
+@media screen and (max-width: 480px) {
   
   .container {
   max-width: 230px;

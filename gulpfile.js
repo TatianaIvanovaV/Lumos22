@@ -2,11 +2,13 @@ const {src, dest, parallel, series, watch} = require ("gulp");
 const browserSync = require ('browser-sync').create();
 const concat = require ("gulp-concat");
 const uglify = require ("gulp-uglify-es").default;
+const sass = require ("gulp-sass");
+const autoprefixer = require ("gulp-autoprefixer");
 
 function browsersync(){
   browserSync.init({
     server: {baseDir: 'src/'},
-    notify: false,
+    notify: true,
     online: true
   })
 };
@@ -22,14 +24,23 @@ function scripts(){
   .pipe(browserSync.stream())
 }
 
-function startwatch() {
-  watch(["src/**/*.js", "!src/**/*.min.js", scripts])
+function styles() {
+  return src([
+    'src/sass/main.sass'
+  ])
+  .pipe(sass())
+  .pipe(concat("app.min.css"))
+  .pipe(autoprefixer({overrideBrowserslist: ['last 3 versions',
+  '> 5%']}))
+  .pipe(dest("src/css/"))
 }
 
-exports.browsersync= browsersync;
-exports.scripts= scripts;
-exports.default= parallel(scripts, browsersync, startwatch);
+function startwatch() {
+  watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
+}
 
-/*gulp.task('task-name', function() {
-  
-});*/
+
+exports.browsersync = browsersync;
+exports.scripts     = scripts;
+exports.styles= styles
+exports.default     = parallel(scripts, browsersync, startwatch);

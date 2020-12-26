@@ -51,10 +51,6 @@ body {
 *::after {
     box-sizing: inherit;
 }
-.container {
-  
-  /*border: 2px solid black;*/
-}
 ul, li {
   display: inline-block;
   margin: 0;

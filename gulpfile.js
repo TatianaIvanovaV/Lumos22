@@ -12,25 +12,24 @@ const imagemin = require ("gulp-imagemin");
 const newer = require ("gulp-newer");
 const del = require ("del");
 const pug = require ("gulp-pug");
-//const pug2html = require ("gulp-w3c-html-validator");
 const plumber = require ("gulp-plumber");
 const sourcemaps = require ("gulp-sourcemaps");
+//const favicons = require('gulp-favicons');
 
 
 function browsersync(){
   browserSync.init({
-    server: {baseDir: 'src/'},
+    server: {baseDir: 'dist/'},
     notify: true,
     online: true
   })
 }
 
 function jade() {
-  return src('src/pug/pages/page1.pug')
+  return src('src/pages/*.pug')
     .pipe(plumber())
     .pipe(pug({pretty: true}))
-    .pipe(dest('src/pug/'))
-    .pipe(browserSync.stream())
+    .pipe(dest('dist/'))
 }
 
 function scripts(){
@@ -44,14 +43,14 @@ function scripts(){
     .pipe(concat("app.min.js"))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest("src/js/"))
+    .pipe(dest("dist/js/"))
     .pipe(browserSync.stream())
 }
 
 function styles() {
-  return src(['src/' + preprocessor + '/main.' + preprocessor+ ' ',
+  return src(['src/assets/' + preprocessor + '/main.' + preprocessor+ ' ',
   "node_modules/bootstrap/dist/css/bootstrap.min.css",
-  'src/css/style.css'
+  'src/assets/css/style.css'
   ])
     .pipe(eval(preprocessor)())
     .pipe(sourcemaps.init())
@@ -60,36 +59,27 @@ function styles() {
     '> 5%']}))
     .pipe(cleancss(( { level: {1:{specialComments:0}}/*, format: 'beautify'*/})))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest("src/css/"))
+    .pipe(dest('dist/assets/css/'))
     .pipe(browserSync.stream())
 }
 
 function images() {
-  return src("src/imgs/img/**/*")
-    .pipe(newer('src/imgs/dest/'))
+  return src("src/assets/img/**/*")
+    .pipe(newer('dist/assets/img/'))
     .pipe(imagemin())
-    .pipe(dest('src/imgs/dest/'))
+    .pipe(dest('dist/assets/img/'))
 }
 
 function fonts() {
-  return src('src/fonts/src/**/*.*')
-    .pipe(dest('src/fonts/dest/'))
+  return src('src/assets/fonts/src/**/*.*')
+    .pipe(dest('dist/assets/fonts/'))
 
 }
 
-function cleanimg() {
-  return del('src/imgs/dest/**/*', {force: true})
-}
-
-function buildcopy() {
-  return src([
-    "src/css/**/*.min.css",
-    "src/js/**/*.min.js",
-    "src/imgs/dest/**/*",
-    "src/fonts/dest/**/*",
-    "src/**/*.html",
-  ], {base: 'src'})
-  .pipe(dest('dist'))
+function favicon() {
+  return src('src/assets/favicons/**/*')
+  //.pipe(favicons())
+    .pipe(dest('dist/assets/favicons/'))
 }
 
 function cleandist() {
@@ -97,12 +87,13 @@ function cleandist() {
 }
 
 function startwatch() {
-  watch(['src/' + preprocessor + '/**/*'], styles);
+  watch(['src/assets/' + preprocessor + '/**/*'], styles);
   watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
-  //watch("src/**/*.html").on('change', browserSync.reload);
-  watch("src/imgs/img/**/*", images);
-  watch("src/pug/pages/**/*.pug", jade);
-  watch("src/fonts/src/**/*", fonts);
+  watch("src/**/*.html").on('change', browserSync.reload);
+  watch("src/img/**/*", images);
+  watch("src/**/*.pug", jade);
+  watch("src/fonts/**/*", fonts);
+  watch("src/favicons/**/*", favicon);
 }
 
 
@@ -110,9 +101,9 @@ exports.browsersync= browsersync;
 exports.scripts= scripts;
 exports.styles= styles;
 exports.images= images;
-exports.cleanimg= cleanimg;
 exports.jade= jade;
 exports.fonts= fonts;
-exports.build= series(cleandist, styles, scripts, images, fonts, buildcopy);
+exports.favicon= favicon;
+exports.build= series(cleandist, favicon, styles, scripts, images, fonts, jade);
 
 exports.default= parallel(styles, scripts, fonts, jade, browsersync, startwatch);

@@ -1,0 +1,48 @@
+@font-face { 
+  font-family: "Lato_400";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/latoregular.eot");
+  src: url("../fonts/Lato/latoregular.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Lato/latoregular.woff") format("woff"),
+        url("../fonts/Lato/latoregular.ttf") format("truetype");
+}
+@font-face { 
+  font-family: "Lato_700";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/latomedium.eot");
+  src: url("../fonts/Lato/latomedium.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Lato/latomedium.woff") format("woff"),
+        url("../fonts/Lato/latomedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato_900";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/latoheavy.eot");
+  src: url("../fonts/Lato/latoheavy.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/Lato/latoheavy.woff") format("woff"),
+        url("../fonts/Lato/latoheavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ChinaCyr";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/China/8650.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}

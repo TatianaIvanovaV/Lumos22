@@ -48,9 +48,10 @@ function scripts(){
 }
 
 function styles() {
-  return src(['src/assets/' + preprocessor + '/main.' + preprocessor+ ' ',
+  return src([
   "node_modules/bootstrap/dist/css/bootstrap.min.css",
-  'src/assets/css/style.css'
+  'src/assets/' + preprocessor + '/main.' + preprocessor+ ' ',
+  'src/assets/css/fonts.css'
   ])
     .pipe(eval(preprocessor)())
     .pipe(sourcemaps.init())
@@ -88,11 +89,12 @@ function cleandist() {
 
 function startwatch() {
   watch(['src/assets/' + preprocessor + '/**/*'], styles);
+  //watch(['src/blocks/**/*.sass'], styles);
   watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
   watch("src/**/*.html").on('change', browserSync.reload);
-  watch("src/img/**/*", images);
+  watch("src/assets/img/**/*", images);
   watch("src/**/*.pug", jade);
-  watch("src/fonts/**/*", fonts);
+  watch("src/assets/fonts/**/*", fonts);
   watch("src/favicons/**/*", favicon);
 }
 

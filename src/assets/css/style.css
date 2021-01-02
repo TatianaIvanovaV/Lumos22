@@ -1,38 +1,4 @@
-@font-face { 
-  font-family: "LatoRegular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Lato/latoregular.eot");
-  src: url("../fonts/Lato/latoregular.eot?#iefix")format("embedded-opentype"),
-        url("../fonts/Lato/latoregular.woff") format("woff"),
-        url("../fonts/Lato/latoregular.ttf") format("truetype");
-}
-@font-face { 
-  font-family: "LatoMedium";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Lato/latomedium.eot");
-  src: url("../fonts/Lato/latomedium.eot?#iefix")format("embedded-opentype"),
-        url("../fonts/Lato/latomedium.woff") format("woff"),
-        url("../fonts/Lato/latomedium.ttf") format("truetype");
-}
 
-@font-face {
-  font-family: "LatoBold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Lato/latoheavy.eot");
-  src: url("../fonts/Lato/latoheavy.eot?#iefix")format("embedded-opentype"),
-        url("../fonts/Lato/latoheavy.woff") format("woff"),
-        url("../fonts/Lato/latoheavy.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "ChinaCyr";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/China/8650.ttf") format("truetype");
-}
 
  html  {
   box-sizing: border-box;

@@ -1,0 +1,6 @@
+section.pros
+  .container.text-center
+    h2 <span class="color-red">ПЛЮСЫ</span> САМОСТОЯТЕЛЬНОГО ОБУЧЕНИЯ
+    .row
+      -let prosList = [{col:'col-lg-4', className: "pros__basics", direct: "images/free-time", descr: 'Вы изучаете уроки в свободное время<br> и в удобном для себя режиме.', alt: "free-time"}, {col:'col-lg-4', className: "pros__basics", direct: "images/no-risk", descr: 'Нет риска не успеть усвоить материал.<br> Вы можете вернуться к обучению<br> в любое удобное время.', alt: "no-risk"},{col:'col-lg-4', className: "pros__basics", direct: "images/structure", descr: 'Материал хорошо структурирован,<br> Вы сможете последовательно проходить этап за этапом.', alt: "structure"} ]
+        +colInfo(prosList) 

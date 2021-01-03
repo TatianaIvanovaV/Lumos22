@@ -1,0 +1,10 @@
+mixin colInfo(array)
+  each item, index in array
+    div(class= item.col)
+      div(class= item.className).text-center
+        if(item.direct == "home")
+          img(src="assets/img/icons/" +item.direct + index+ ".png" alt= item.alt)
+          p= item.descr
+        else 
+          img(src="assets/img/icons/" +item.direct +".png" alt= item.alt)
+          p !{item.descr}

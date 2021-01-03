@@ -1,26 +1,25 @@
 section.header
     .container
-        .row
-            .col-12.col-md
-                .header__logo 
-                    img(src='./assets/img/lumos-logo.png' alt="ЛЮМОС 22")
-            .col-12.col-md-9
-                h4.header__h4 PDF-конспекты для самостоятельного изучения курса
-        .row
-            .col-12.col-lg-7 
-                .header__title
-                    h1.header__h1.text-center ПРЕДСКАЗАТЕЛЬНЫЙ
-                    p.header__font-china.text-center ФЕНШУЙ <span class="color-white">9</span> ДВОРЦОВ
-                    .header__stars.d-flex.justify-content-center
-                        - for (let i = 0; i < 9; i++) 
-                            img(src="./assets/img/icons/Star.png" alt="star")
-                    .header__subtitle.text-center
-                        p Освойте базовые навыки системы прогностики<br class="mobile"> по 9 дворцам,
-                        p.color-yellow ЧТОБЫ ПРОГНОЗИРОВАТЬ И КОРРЕКТИРОВАТЬ<br class="mobile"> СВОЕ БУДУЩЕЕ
-                        p ДЛЯ ПОЛУЧЕНИЯ ДЕНЕГ, ЗДОРОВЬЯ И УДАЧИ
-                    .header__autor.mobile
+        .header__upper.text-center
+            .header__logo 
+                img(src='./assets/img/lumos-logo.png' alt="ЛЮМОС 22")
+            h4.header__h4 PDF-конспекты для самостоятельного изучения курса
+        .header__main
+            .row
+                .col-12.col-lg-7 
+                    .header__title
+                        h1.header__h1.text-center ПРЕДСКАЗАТЕЛЬНЫЙ
+                        p.header__font-china.text-center ФЕНШУЙ <span class="color-white">9</span> ДВОРЦОВ
+                        .header__stars.d-flex.justify-content-center
+                            - for (let i = 0; i < 9; i++) 
+                                img(src="./assets/img/icons/Star.png" alt="star")
+                        .header__subtitle.text-center
+                            p Освойте базовые навыки системы прогностики<br class="mobile"> по 9 дворцам,
+                            p.color-yellow ЧТОБЫ ПРОГНОЗИРОВАТЬ И КОРРЕКТИРОВАТЬ<br class="mobile"> СВОЕ БУДУЩЕЕ
+                            p ДЛЯ ПОЛУЧЕНИЯ ДЕНЕГ, ЗДОРОВЬЯ И УДАЧИ
+                        .header__autor.mobile
+                            img(src="./assets/img/images/autor-top.png" alt="Автор Татьяна Панюшкина")
+                        .header__down-descr.text-center Без обратной связи от Татьяны Панюшкиной и домашних заданий.
+                .col-lg-5.d-none.d-lg-block
+                    .header__autor
                         img(src="./assets/img/images/autor-top.png" alt="Автор Татьяна Панюшкина")
-                    .header__down-descr.text-center Без обратной связи от Татьяны Панюшкиной и домашних заданий.
-            .col-12.col-lg-5
-                .header__autor
-                    img(src="./assets/img/images/autor-top.png" alt="Автор Татьяна Панюшкина")

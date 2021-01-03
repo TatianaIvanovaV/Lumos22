@@ -1,0 +1,8 @@
+section.differences
+  .container.text-center
+    h2 <span class="color-red">В ЧЕМ ОТЛИЧИЕ</span> PDF-КОНСПЕКТОВ <br>ОТ "ЗАОЧНОЙ" ВЕРСИИ КУРСА?
+    .row
+      -let differencesList = [{col:'col-12 col-lg-4', className: "differences__basics", direct: "yes", descr: 'Вы получаете конспекты<br>первых трех модулей курса "Предсказательный фэншуй 9 Дворцов"', alt: "yes"}, {col:'col-12 col-lg-4', className: "differences__basics" , direct: "no", descr: 'Видео-записи уроков отсутствуют,<br>без обратной связи от Татьяны Панюшкиной и домашних заданий.', alt: "no"}, {col:'col-12 col-lg-4', className: "differences__basics" , direct: "yes", descr: 'Цена комплекта в 15 раз меньше,<br>чем полная стоимость пакета "Мастер", конспекты которого Вы получите', alt: "yes"}]
+        +colInfo(differencesList)
+    .differences__bottom
+      .differences__arrow

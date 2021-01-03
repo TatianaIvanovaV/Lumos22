@@ -2,14 +2,20 @@
 section.presentation
   .container
     .row
-      .col-12.col-md
-        .presentation__rectangle.text-center В результате самостоятельного обучения по конспектам Вы:
-    .row
       - let presentationLearn= [{col:'col-12 col-lg-3', alt: "in-yan", descr: "Поймете основные положения 9-Дворцов и взаимодействие стихий"}, {col:'col-12 col-lg-6', alt: "home", descr: "Научитесь делать активации в помещениях для корректировки и уничтожения негативных энергий, для привлечения удачи, денег, здоровья, счастья, хороших отношений и т. д."}, {col:'col-12 col-lg-3', alt: "search", descr: "Научитесь прогнозировать будущее человека по дате его рождения"}]
         each item, index in presentationLearn
           div(class= item.col)
             .presentation__basics.text-center
               img(src="assets/img/icons/home" +index+ ".png" alt= item.alt)
               p= item.descr
-            
+    .row.justify-content-center.text-center
+      .col-12.col-lg-8
+        .presentation__offer
+          .presentation__titlecost Стоимость<br class="mobile"> PDF-конспектов
+          .presentation__value.color-yellow.text-center 2 900 РУБ.
+          a.presentation__cost(data-value="cost") приобрести конспекты
+          .presentation__timer
+            p Заказать и оплатить комплект конспектов можно в течение 36 часов
+            p ДО КОНЦА ПРЕДЛОЖЕНИЯ ОСТАЛОСЬ:
+            p ТАЙМЕР НА 36 ЧАСОВ        
         

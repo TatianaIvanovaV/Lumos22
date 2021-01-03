@@ -14,7 +14,6 @@ const del = require ("del");
 const pug = require ("gulp-pug");
 const plumber = require ("gulp-plumber");
 const sourcemaps = require ("gulp-sourcemaps");
-//const favicons = require('gulp-favicons');
 
 
 function browsersync(){
@@ -50,6 +49,7 @@ function scripts(){
 function styles() {
   return src([
   "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
   'src/assets/' + preprocessor + '/main.' + preprocessor+ ' ',
   'src/assets/css/fonts.css'
   ])
@@ -89,7 +89,7 @@ function cleandist() {
 
 function startwatch() {
   watch(['src/assets/' + preprocessor + '/**/*'], styles);
-  //watch(['src/blocks/**/*.sass'], styles);
+  watch(['src/blocks/**/*.sass'], styles);
   watch(["src/**/*.js", "!src/**/*.min.js"], scripts);
   watch("src/**/*.html").on('change', browserSync.reload);
   watch("src/assets/img/**/*", images);

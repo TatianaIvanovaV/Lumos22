@@ -1,6 +1,7 @@
 
 extends ./layout/layout.pug
-include ./mixin.pug
+include ./layout/mixin.pug
+include ../blocks/button/button.pug
   
 block content
   include ../blocks/header/header.pug
@@ -12,6 +13,6 @@ block content
     include ../blocks/differences/differences.pug
     include ../blocks/notes/notes.pug
     include ../blocks/pros/pros.pug
-    
+    include ../blocks/buy-notes/buy-notes.pug
     
   include ../blocks/footer/footer.pug

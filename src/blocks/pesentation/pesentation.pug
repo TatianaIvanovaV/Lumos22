@@ -1,14 +1,13 @@
-
 section.presentation
   .container
     .row
       - let presentationLearn= [{col:'col-12 col-lg-3', className: "presentation__basics", direct: "home", descr: "Поймете основные положения 9-Дворцов и взаимодействие стихий", alt: "in-yan"}, {col:'col-12 col-lg-6',className: "presentation__basics", direct: "home", descr: "Научитесь делать активации в помещениях для корректировки и уничтожения негативных энергий, для привлечения удачи, денег, здоровья, счастья, хороших отношений и т. д.", alt: "home"}, {col:'col-12 col-lg-3', className: "presentation__basics", direct: "home", descr: "Научитесь прогнозировать будущее человека по дате его рождения", alt: "search"}]
         +colInfo(presentationLearn)
-    .presentation__offer.justify-content-center.text-center
+    .presentation__offer.text-center
       .presentation__titlecost Стоимость<br class="mobile"> PDF-конспектов
-      .presentation__value.color-yellow 2 900 РУБ.
+      .presentation__value 2 900 РУБ.
       .presentation__button
-        a(href="#").buy-button приобрести конспекты
+        +button()
       .presentation__timer
         p Заказать и оплатить комплект конспектов можно в течение 36 часов
         p ДО КОНЦА ПРЕДЛОЖЕНИЯ ОСТАЛОСЬ:

@@ -1,0 +1,52 @@
+@mixin footer-link($color, $border-bottom)
+  border-bottom: #{$border-bottom}
+  color: #{$color}
+  text-decoration: none 
+.footer
+  background: url('../img/backgrounds/footerBG.jpg') no-repeat center top
+  color: $white
+  padding: 35px 0 20px 0 
+  a:hover 
+    text-decoration: none 
+  &__service
+    margin: 0 -15px
+    h4
+      margin: 0 0 15px 0
+    a
+      @include footer-link($yellow,1px solid $yellow)
+  &__separate
+    height: 85px
+    width: 2px
+    margin: 0 auto
+    background: $yellow
+  &__call
+    margin: 0 0 0 -6px
+  &__tel-num
+    font-size: 24px
+    line-height: 29px
+    padding: 0 5px 0 0
+    a
+      @include footer-link($yellow,1px solid $yellow)
+  &__modal
+    margin: 10px 0 0 0
+    a
+      @include footer-link($white, none)
+  &__official-data,
+  &__subtitle
+    font:
+      family: 'Roboto'
+      size: 12px
+      weight: normal
+    line-height: 14px
+    color: $text-roboto
+  &__official-data
+    padding: 8px 0 0 0
+    p
+      &:nth-of-type(1)
+        margin: 0 0 12px 0
+      &:nth-of-type(2)
+        margin: 0 0 8px 0
+    a
+      @include footer-link($text-roboto, 1px solid $text-roboto)
+  &__subtitle
+    margin: 19px 0 0

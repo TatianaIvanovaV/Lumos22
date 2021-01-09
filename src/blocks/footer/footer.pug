@@ -1,29 +1,22 @@
-footer.foot
-  .container
-    .row
-      .col-12.col-md-3.contacts
-        .foot__service
-          p Служба поддержки
-          a(href="") info@tatyana-panyushkina.com
-          //-  <div class="col-12 col-md-6 contacts">
-                    <div class="foot__call text-left">
-                        <p>Бесплатный звонок по России</p>
-                        <p class="contacts__tel"><a href="tel:+ 88003500308">8 (800) 350-03-08</p></a>
-                        <p class="contacts__modal"><a href="#modal" data-toggle="modal" data-target="#exampleModalCenter" class="contacts__open-modal">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</a></p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 contacts">
-                    <div class="foot__official-data text-left">
-                        <p>ИП Панюшкина Т.П.</p>
-                        <p>ОГРН 317745600182737 <br> ИНН 744900497027</small></p>
-                        <p><a href="#">Политика конфиденциальности</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6">
-                    <div class="foot__subtitle text-center">
-                        <p>© 2019, Система Предсказательный Фэншуй 9 дворцов Татьяны Панюшкиной</p>
-                    </div>
-                </div>
-            </div>
+footer.footer
+    .container
+        .row
+            .col-12.col-md-6.col-lg-3
+                .footer__service.text-left
+                    h4 Служба поддержки
+                    a(href="info@tatyana-panyushkina.com") info@tatyana-panyushkina.com 
+            .col-lg.d-none.d-lg-block.col-lg
+                .footer__separate
+            .col-12.col-md-6.col-lg-5
+                .footer__call.text-left
+                    h4 Бесплатный звонок по России
+                    .footer__tel-num
+                        a(href="tel:+ 88003500308") 8 (800) 350-03-08 
+                    .footer__modal
+                        a(href="#modal" data-toggle="modal" data-target="#exampleModalCenter" class="contacts__open-modal") ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
+            .col-12.col-md-12.col-lg-3
+                .footer__official-data.text-left
+                    p ИП Панюшкина Т.П.
+                    p ОГРН 317745600182737 <br>ИНН 744900497027
+                    a(href="#") Политика конфиденциальности
+        .footer__subtitle.text-center © 2019, Система Предсказательный Фэншуй 9 дворцов Татьяны Панюшкиной 
